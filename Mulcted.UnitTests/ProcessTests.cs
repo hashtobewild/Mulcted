@@ -30,6 +30,10 @@ namespace Mulcted.UnitTests
         [TestCase(51, 852000, 168300)]
         [TestCase(25, 852000, 207000)]
         [TestCase(5, 852000, 255600)]
+        // Wonky cases
+        [TestCase(-5, 180000, 13500)]
+        [TestCase(5, -180000, 0)]
+        [TestCase(5, int.MaxValue - 1, 644245093.8)]
         public void TestInputTaxCalculations(int age, decimal salary, decimal taxAmount)
         {
             var result = _taxCalculator.Calculate(age, salary);
