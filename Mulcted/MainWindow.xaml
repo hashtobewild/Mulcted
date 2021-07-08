@@ -166,8 +166,9 @@
                 x:Name="SalaryDisplay"
                 Grid.Row="1"
                 Grid.Column="1"
-                HorizontalAlignment="Right"
-                Content="{Binding Path=Salary}" />
+                HorizontalAlignment="Right">
+                <TextBlock Text="{Binding Path=Salary, StringFormat={}{0:C}}" />
+            </Label>
             <Label Grid.Row="2" Grid.Column="0">Age:</Label>
             <Label
                 x:Name="AgeDisplay"
@@ -180,8 +181,9 @@
                 x:Name="ReliefDisplay"
                 Grid.Row="3"
                 Grid.Column="1"
-                HorizontalAlignment="Right"
-                Content="{Binding Relief}" />
+                HorizontalAlignment="Right">
+                <TextBlock Text="{Binding Path=Relief, StringFormat={}{0:C}}" />
+            </Label>
             <Label
                 Grid.Row="4"
                 Grid.Column="0"
@@ -193,8 +195,9 @@
                 Grid.Row="4"
                 Grid.Column="1"
                 HorizontalAlignment="Right"
-                Content="{Binding Total}"
-                FontWeight="ExtraBold" />
+                FontWeight="ExtraBold">
+                <TextBlock Text="{Binding Path=Total, StringFormat={}{0:C}}" />
+            </Label>
         </Grid>
         <Label
             Grid.Row="1"
