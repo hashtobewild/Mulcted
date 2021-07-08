@@ -52,14 +52,14 @@ namespace Mulcted.Processes.Implementations
             {
                 new AgeBasedReliefItem
                 {
-                    AgeEnd = 18,
+                    AgeEnd = 17,
                     AgeStart = int.MinValue,
                     Deduction = 1m,
                     ReliefAmount = 0m
                 },
                 new AgeBasedReliefItem
                 {
-                    AgeEnd = 50,
+                    AgeEnd = 49,
                     AgeStart = 18,
                     Deduction = 1m,
                     ReliefAmount = 2000m * 12m
