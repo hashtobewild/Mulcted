@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Mulcted.Processes.Implementations;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Mulcted
 {
@@ -23,6 +11,13 @@ namespace Mulcted
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Go_Click(object sender, RoutedEventArgs e)
+        {
+            var testingCalc = new TaxCalculator();
+            var xx = testingCalc.Calculate(51, 120000);
+            var yy = xx.DeductionAmount;
         }
     }
 }

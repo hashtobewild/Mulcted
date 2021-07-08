@@ -7,7 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\cookie.png" />
+    <None Remove="Resources\jason-leung-SAYzxuS1O3M-unsplash.jpg" />
+    <None Remove="Resources\money.png" />
+    <None Remove="Resources\money_calculator.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Mulcted.Processes\Mulcted.Processes.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\cookie.png" />
+    <Resource Include="Resources\jason-leung-SAYzxuS1O3M-unsplash.jpg" />
+    <Resource Include="Resources\money.png" />
+    <Resource Include="Resources\money_calculator.png" />
   </ItemGroup>
 
 </Project>

@@ -5,35 +5,194 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Mulcted"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
     Title="Get Mulcted"
-    Width="800"
-    Height="450"
+    Width="400"
+    Height="300"
+    Icon="Resources/money.png"
+    WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
-    <Grid>
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/jason-leung-SAYzxuS1O3M-unsplash.jpg" Opacity="0.4" />
+    </Window.Background>
+    <Grid Margin="10">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Background="AliceBlue">
-            <Label>Top</Label>
+        <Grid
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Background="LightSlateGray"
+            Opacity="0.5" />
+        <Grid
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock
+                Grid.Row="1"
+                Margin="10"
+                Foreground="White"
+                TextWrapping="Wrap">
+                Please enter your annual salary and your age, to calculate your payable tax
+            </TextBlock>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image
+                    Grid.Column="0"
+                    Width="24"
+                    Height="24"
+                    Source="Resources/money.png"
+                    Stretch="Uniform" />
+                <xctk:IntegerUpDown
+                    Grid.Column="1"
+                    Margin="5"
+                    FormatString="C0"
+                    Increment="1"
+                    Minimum="0"
+                    Watermark="Annual Salary" />
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image
+                    Grid.Column="0"
+                    Width="24"
+                    Height="24"
+                    Source="Resources/cookie.png"
+                    Stretch="Uniform" />
+                <xctk:IntegerUpDown
+                    Grid.Column="1"
+                    Margin="5"
+                    Increment="1"
+                    Maximum="199"
+                    Minimum="1"
+                    Watermark="Age" />
+            </Grid>
+            <Grid Grid.Row="4" Margin="10">
+                <xctk:IconButton
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Background="Navy"
+                    Foreground="White"
+                    IconLocation="Left">
+                    <xctk:IconButton.Icon>
+                        <Image
+                            Width="24"
+                            Height="24"
+                            Margin="5"
+                            Source="Resources/money_calculator.png"
+                            Stretch="Uniform" />
+                    </xctk:IconButton.Icon>
+                    Calculate!
+                </xctk:IconButton>
+            </Grid>
         </Grid>
-        <Grid Grid.Row="1" Background="AliceBlue">
-            <Label>Center</Label>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid Background="Wheat" Opacity="0.3" />
+            <Grid.RenderTransform>
+                <RotateTransform Angle="-15" />
+            </Grid.RenderTransform>
         </Grid>
-        <Grid Grid.Row="2" Background="AliceBlue">
-            <Label>Bottom</Label>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid Background="Wheat" Opacity="0.4" />
+            <Grid.RenderTransform>
+                <RotateTransform Angle="-10" />
+            </Grid.RenderTransform>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid
+                Margin="10"
+                Background="White"
+                Opacity="0.8" />
+            <Grid.RenderTransform>
+                <RotateTransform Angle="0" />
+            </Grid.RenderTransform>
         </Grid>
         <Grid
             Grid.Row="0"
-            Grid.RowSpan="3"
             Grid.Column="1"
-            Background="BlueViolet">
-            <Label>Content</Label>
+            Margin="25">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="5"
+                HorizontalAlignment="Center"
+                FontSize="30"
+                FontStyle="Italic">
+                <TextBlock TextDecorations="Underline">Tax</TextBlock>
+            </Label>
+            <Label Grid.Row="1" Grid.Column="0">Salary:</Label>
+            <Label
+                x:Name="SalaryDisplay"
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalAlignment="Right" />
+            <Label Grid.Row="2" Grid.Column="0">Age:</Label>
+            <Label
+                x:Name="AgeDisplay"
+                Grid.Row="2"
+                Grid.Column="1"
+                HorizontalAlignment="Right" />
+            <Label Grid.Row="3" Grid.Column="0">Relief:</Label>
+            <Label
+                x:Name="ReliefDisplay"
+                Grid.Row="3"
+                Grid.Column="1"
+                HorizontalAlignment="Right" />
+            <Label
+                Grid.Row="4"
+                Grid.Column="0"
+                FontWeight="ExtraBold">
+                Total:
+            </Label>
+            <Label
+                x:Name="TotalDisplay"
+                Grid.Row="4"
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                FontWeight="ExtraBold" />
         </Grid>
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            FontSize="10"
+            Foreground="White">
+            Background Photo by Jason Leung on Unsplash
+        </Label>
     </Grid>
 </Window>
