@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mulcted", "Mulcted\Mulcted.csproj", "{2C35AA87-FCD3-4AF3-AD5C-3D685B8F6288}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mulcted", "Mulcted\Mulcted.csproj", "{2C35AA87-FCD3-4AF3-AD5C-3D685B8F6288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mulcted.UnitTests", "Mulcted.UnitTests\Mulcted.UnitTests.csproj", "{82F1ADF7-8FAA-44D8-8B7A-C30672694D03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mulcted.Processes", "Mulcted.Processes\Mulcted.Processes.csproj", "{1D73B6A7-82AA-4D9F-B3CA-C76A57861C24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{2C35AA87-FCD3-4AF3-AD5C-3D685B8F6288}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C35AA87-FCD3-4AF3-AD5C-3D685B8F6288}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C35AA87-FCD3-4AF3-AD5C-3D685B8F6288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82F1ADF7-8FAA-44D8-8B7A-C30672694D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82F1ADF7-8FAA-44D8-8B7A-C30672694D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82F1ADF7-8FAA-44D8-8B7A-C30672694D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82F1ADF7-8FAA-44D8-8B7A-C30672694D03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D73B6A7-82AA-4D9F-B3CA-C76A57861C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D73B6A7-82AA-4D9F-B3CA-C76A57861C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D73B6A7-82AA-4D9F-B3CA-C76A57861C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D73B6A7-82AA-4D9F-B3CA-C76A57861C24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
